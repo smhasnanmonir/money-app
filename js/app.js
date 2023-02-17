@@ -9,21 +9,26 @@ function totalExpense(input1, input2, input3) {
   return expense;
 }
 
-document.getElementById("calc-btn").addEventListener("click", function () {
-  let incomeInput = getValue("income-input");
+function expenseShower() {
   let foodInput = getValue("food-input");
   let rentInput = getValue("rent-input");
   let clothInput = getValue("cloths-input");
-  let expenseShower = totalExpense(foodInput, rentInput, clothInput);
+  let expenseShower1 = totalExpense(foodInput, rentInput, clothInput);
+  return expenseShower1;
+}
+
+document.getElementById("calc-btn").addEventListener("click", function () {
+  let incomeInput = getValue("income-input");
   let expenseSpan = document.getElementById("expense-span");
-  expenseSpan.innerText = expenseShower + " Taka";
-  if (incomeInput > expenseShower) {
-    let currentBalance = incomeInput - expenseShower;
+  expenseSpan.innerText = expenseShower() + " Taka";
+  let currentBalance = incomeInput - expenseShower();
+  if (incomeInput > expenseShower()) {
     let balanceShower = document.getElementById("balance-span");
     balanceShower.innerHTML = currentBalance + " Taka";
   } else {
-    expenseSpan.innerText = "Expense can not be larger than income";
+    expenseSpan.innerText = "Expense is too high";
   }
 });
 
 // Percentage calculate
+document.getElementById("save-btn").addEventListener("click", function () {});
