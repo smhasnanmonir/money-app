@@ -18,10 +18,10 @@
       <div class="img-div">
         <img class="" src="./img/photo1.png" alt="" />
       </div>
-      <div class="calculate-div px-14 bg-slate-50">
+      <div class="calculate-div lg:px-14 px-7">
         <h1 class="font-black text-xl">Income</h1>
         <!-- Income div -->
-        <div class="income-div my-5 flex items-center gap-2">
+        <div class="income-div lg:my-5 flex items-center gap-2">
           <p class="my-3">Income:</p>
           <input
             class="p-2 bg-slate-100"
@@ -61,20 +61,20 @@
             />
           </div>
           <button
-            id="expense-btn"
-            class="p-3 bg-blue-400 hover:bg-blue-600 mt-3 text-white"
+            id="calc-btn"
+            class="p-2 w-44 bg-blue-400 hover:bg-blue-600 mt-3 text-white"
           >
             Calculate
           </button>
           <div class="diplay-calc-div mt-5">
             <p class="mt-3 font-bold">
-              Total Expense:<span id="expense-span"></span>
+              Total Expense : <span id="expense-span"></span>
             </p>
             <p class="mt-3 font-bold">
-              Balance:<span id="balance-span"></span>
+              Balance : <span id="balance-span"></span>
             </p>
           </div>
-          <div class="flex items-center gap-3 mt-3">
+          <div class="flex lg:items-center gap-3 mt-3 lg:flex-row flex-col">
             <p>Save:</p>
             <input
               class="bg-slate-100 p-2"
@@ -83,7 +83,10 @@
               placeholder="Enter percentage"
             />
             <p>%</p>
-            <button class="p-2 text-white w-44 bg-blue-400 hover:bg-blue-600">
+            <button
+              id="save-btn"
+              class="p-2 text-white w-44 bg-blue-400 hover:bg-blue-600"
+            >
               Save
             </button>
           </div>
@@ -98,5 +101,6 @@
         </div>
       </div>
     </section>
+    <script src="js/app.js"></script>
   </body>
 </html>
